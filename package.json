@@ -2,16 +2,21 @@
   "name": "map-perpart",
   "version": "1.0.0",
   "description": "MVP do mapa para igor",
-  "main": "js/index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "leaflet": "^1.9.4",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
   }

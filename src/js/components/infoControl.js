@@ -16,4 +16,4 @@ infoControl.update = function (props) {
   `;
 };
 
-module.exports =  { infoControl };
+export default   infoControl;

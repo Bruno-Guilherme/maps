@@ -1,5 +1,7 @@
 //import { infoControl } from "./components/infoControl";
-const { infoControl } = require('./components/infoControl');
+import L from 'leaflet';
+import 'leaflet.css';
+import infoControl  from './components/infoControl';
 
 var map = L.map('map', {
   zoomControl: false, maxZoom: 28, minZoom: 1
