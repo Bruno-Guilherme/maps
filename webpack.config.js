@@ -1,4 +1,5 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -11,11 +12,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          outputPath: 'assets/', // Define onde os arquivos serão copiados
-        },
+        test: /\.(png|jpg|gif|svg)$/,
+        include: [
+          path.resolve(__dirname, 'node_modules/leaflet/dist/images')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -27,9 +36,14 @@ module.exports = {
   resolve: {
     alias: {
       leaflet: path.resolve(__dirname, 'node_modules/leaflet/dist/leaflet.js'),
-      'leaflet.css': path.resolve(__dirname, 'node_modules/leaflet/dist/leaflet.css'),
     },
     extensions: ['.js', '.jsx'],
   },
-  
+
+  plugins: [
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!index.html'],
+    }),
+  ],
+
 };
