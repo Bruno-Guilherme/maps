@@ -1,6 +1,11 @@
 //import { infoControl } from "./components/infoControl";
 import L from 'leaflet';
 import 'leaflet.css';
+
+// Plugins
+import './plugins/leaflet-sidebar.js'
+
+// Componentes
 import infoControl  from './components/infoControl';
 
 var map = L.map('map', {
@@ -14,5 +19,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.control.zoom({
   position: 'bottomright'
 }).addTo(map);
+
+
+const sidebar = L.control.sidebar('sidebar').addTo(map);
 
 infoControl.addTo(map);

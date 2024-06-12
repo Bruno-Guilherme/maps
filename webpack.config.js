@@ -26,9 +26,10 @@ module.exports = {
 
   resolve: {
     alias: {
-      'leaflet': path.resolve(__dirname, 'node_modules/leaflet/dist/leaflet.js'),
+      leaflet: path.resolve(__dirname, 'node_modules/leaflet/dist/leaflet.js'),
       'leaflet.css': path.resolve(__dirname, 'node_modules/leaflet/dist/leaflet.css'),
     },
+    extensions: ['.js', '.jsx'],
   },
   
 };

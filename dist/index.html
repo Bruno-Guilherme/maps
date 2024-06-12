@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../src/css/style.css">
 
     <title>MVP Mapa Perpart</title>
 </head>
+
 <body>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#profile" role="tab"><i class="fa fa-filter"></i></a></li>
+                <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i
+                            class="fa fa-github"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="home">
+                <h1 class="sidebar-header">
+                    sidebar-v2
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+
+                <div class="content" id="home-content">
+
+                </div>
+            </div>
+
+            <div class="sidebar-pane" id="profile">
+                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+
+                <div class="content">
+                    <!-- <div class="filter-container">
+                        <h2>Filtros</h2>
+                        <form>
+                            <div class="filter-group">
+                                <label for="search"><i class="fas fa-search"></i> Pesquisa:</label>
+                                <input type="text" id="search" name="search" placeholder="Digite para pesquisar...">
+                            </div>
+                            <div class="filter-group">
+                                <label for="category"><i class="fas fa-tags"></i> Categoria:</label>
+                                <select id="category" name="category">
+                                    <option value="all">Todas</option>
+                                    <option value="category1">Categoria 1</option>
+                                    <option value="category2">Categoria 2</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="date"><i class="fas fa-calendar"></i> Data:</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <button type="submit"><i class="fas fa-filter"></i> Aplicar Filtros</button>
+                        </form>
+                    </div> -->
+
+                    <div class="container">
+                        <h2>Buscar por CEP</h2>
+                        <input type="text" id="cep" placeholder="Digite o CEP">
+                        <button id="enviar">Buscar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-pane" id="messages">
+                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+            </div>
+
+            <div class="sidebar-pane" id="settings">
+                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
     <div id="map"></div>
 
     <script src="main.js"></script>
 </body>
+
 </html>
